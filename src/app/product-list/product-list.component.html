@@ -21,29 +21,21 @@
           </tr>
         </thead>
         <tbody class="divide-y divide-gray-100">
-          <tr class="bg-gray-50">
+          <tr class="bg-gray-50" **ngFor="let product of products">
             <th class="p-3 text-sm text-gray-700 whitespace-nowrap">
-              <a href="#" class="font-bold text-blue-500 hover:underline"
-                >1</a
-              >
+              <a href="#" class="font-bold text-blue-500 hover:underline">{{
+                product.idProduct
+              }}</a>
             </th>
             <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
-              Lorem ipsum
+              {{ product.description }}
             </td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">20</td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">50</td>
-          </tr>
-          <tr class="bg-gray-50">
-            <th class="p-3 text-sm text-gray-700 whitespace-nowrap">
-              <a href="#" class="font-bold text-blue-500 hover:underline"
-                >2</a
-              >
-            </th>
             <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
-              Lorem ipsum
+              {{ product.price }}
             </td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">20</td>
-            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">50</td>
+            <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
+              {{ product.stock }}
+            </td>
           </tr>
         </tbody>
       </table>

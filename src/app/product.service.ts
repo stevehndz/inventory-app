@@ -1,11 +1,18 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Injectable, NgModule } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
 })
+
+@NgModule({
+  imports: [
+    HttpClientModule
+  ]
+})
+
 export class ProductService {
   // Base url to manage product routes
   private urlBase = "http://localhost:8080/inventory-app/products";
